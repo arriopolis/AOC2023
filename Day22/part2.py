@@ -54,22 +54,4 @@ for a in essential:
                 to_fall.add(b)
                 heapq.heappush(q, (min(p[2] for p in b), b))
     t += len(to_fall)-1
-
-# to_fall = {a : set() for a in supports}
-# while supp:
-#     todel = set()
-#     for a,bs in supp.items():
-#         if not bs: todel.add(a)
-#     for a in todel:
-#         for b in supports[a]:
-#             to_fall[b].update(to_fall[a])
-#             to_fall[b].add(a)
-#             supp[b].remove(a)
-#         del supp[a]
-
-# t = 0
-# ctr = 0
-# for a in essential:
-#     ctr += 1
-#     t += len(to_fall[a])
 print(t)
